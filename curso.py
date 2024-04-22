@@ -6,3 +6,6 @@ class Curso:
 
     def get_id(self):
         return self.__id_curso
+    
+print("esse é o curso")    
+print("Novo curso")
