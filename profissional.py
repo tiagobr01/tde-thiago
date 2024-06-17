@@ -11,7 +11,8 @@ class Autor(Profissional):
         super().__init__(nome,cpf,email)
         self.curso=curso
     def __str__(self) -> str:
-        return f"Nome:{self.nome}\n,Cpf:{self.cpf}\n,Email:{self.email}\n,Curso:{self.curso}"       
+        if self.id != None:
+            return f"Nome:{self.nome}\n,Cpf:{self.cpf}\n,Email:{self.email}\n,Curso:{self.curso}"       
     def __eq__(self,outro) -> bool:
         if not isinstance(outro,Autor):
             return False
@@ -31,7 +32,8 @@ class Orientador(Profissional):
         else:
             self.titulacao=titulacao
     def __str__(self) -> str:
-        return f"Nome:{self.nome}\n,Cpf:{self.cpf}\n,Email:{self.email}\n,Curso:{self.titulacao}"        
+        if self.id != None:
+            return f"Nome:{self.nome}\n,Cpf:{self.cpf}\n,Email:{self.email}\n,Curso:{self.titulacao}"        
     def __eq__(self,outro) -> bool:
         if not isinstance(outro,Orientador):
             return False

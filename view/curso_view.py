@@ -8,6 +8,7 @@ class CursoView:
     def inserirCurso(self):
         nome=input("Nome do curso: ")
         descricao=input("Descrição do curso: ")
+        id=int(input("Informe o id do curso"))
         if self.CursoBC.salvarCurso(nome,descricao):
             print("Sucesso")
         else:
